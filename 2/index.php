@@ -1,6 +1,7 @@
 
 <form action="Hw.php" method="post">
-    Stringa:  <input type="text" name="username" /><br />
-    <input type="submit" name="submit" value="Send Me" />
+    <p><b>Введите ваш отзыв:</b></p>
+    <p><textarea rows="5"  name="text"></textarea></p>
+    <p><input type="submit" value="Отправить"></p>
 </form>
 <?php
