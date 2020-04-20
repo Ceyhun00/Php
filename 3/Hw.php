@@ -3,9 +3,9 @@ function simple()
 {
     $nl_char = "\n";
     $pr = explode($nl_char, $_POST['text']);
-    $arr = [];
-    $ar=[];
-    $aq = [];
+    $randomsentences = [];
+    $secondwords=[];
+    $resultarr = [];
     foreach ($pr as $item) {
         $words = explode(" ", $item);
         shuffle($words);
@@ -13,31 +13,28 @@ function simple()
         for ($q = 0; $q <= count($words) - 1; $q++) {
             $result .= $words[$q]." ";
         }
-        array_push($arr, $item, $result);
+        array_push($randomsentences, $item, $result);
     }
 
-    for ($i = 0; $i <= count($arr) - 1; $i++) {
-        $c=explode(" ",$arr[$i]);
-        array_push($ar, $c[1]);
+    for ($i = 0; $i <= count($randomsentences) - 1; $i++) {
+        $c=explode(" ",$randomsentences[$i]);
+        array_push($secondwords, $c[1]);
     }
-    sort($ar);
-    for ($j = 0; $j <= count($arr) - 1; $j++) {
+    sort($secondwords);
+    for ($j = 0; $j <= count($randomsentences) - 1; $j++) {
 
-        for ($b = 0; $b <= count($ar) - 1; $b++) {
-            $second=explode(" ", $arr[$b])[1];
-            $sortarrword=$ar[$j];
+        for ($b = 0; $b <= count($secondwords) - 1; $b++) {
+            $second=explode(" ", $randomsentences[$b])[1];
+            $sortarrword=$secondwords[$j];
             if ($sortarrword == $second) {
-                $aq[$j]=$arr[$b];
+                $resultarr[$j]=$randomsentences[$b];
                 break;
             }
         }
     }
-foreach ($aq as $j){
+foreach ($resultarr as $j){
     echo $j."<br/>";
 }
 }
 simple();
-
-
-
 
