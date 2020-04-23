@@ -2,7 +2,6 @@
 
 $c=$_POST['text'];
 
-
 function simple($str,$from=0)
 {
     $count = 0;
@@ -16,15 +15,20 @@ function simple($str,$from=0)
         } elseif ($str[$i] == 'l') {
             $str[$i] = 1;
             $count += 1;
+        }elseif ($str[$i] == 'e') {
+            $str[$i] = 3;
+            $count += 1;
         }
         yield $str[$i];
     }
-    echo "<br/>".$count;
+    echo $count."</br>";
 }
 function pucs($str){
-   foreach (simple($str) as $val){
-    echo $val;
-   }
+    $string ="";
+    foreach (simple($str) as $val){
+        $string.=$val;
+    }
+    return $string;
 }
-pucs($c);
-
+$result=pucs($c);
+echo  $result;
