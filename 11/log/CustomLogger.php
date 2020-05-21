@@ -1,27 +1,9 @@
 <?php
-/**
- * CustomLogger class
- * PHP version 7.*
- * 
- * @category Class
- * @package  CustomLogger
- * @author   Aoao <Aaooa@gmail.com>
- * @license  http://www.gnu.org/l GNU General Public License
- * @link     none
- */
+
 namespace log;
 
 use \Psr\Log\AbstractLogger as AbstractLogger;
-/**
- * CustomLogger class
- * PHP version 7.*
- * 
- * @category Class
- * @package  CustomLogger
- * @author   Aoao <Aoao@gmail.com>
- * @license   GNU General Public License
- * @link     none
- */
+
 class CustomLogger extends AbstractLogger
 {
     /**
