@@ -1,13 +1,5 @@
 <?php
-/**
- * PHP version 7.*
- * 
- * @category Class
- * @package  MyClass
- * @author   AgleevTimur <fantomas2213@gmail.com>
- * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @link     none
- */
+
 use Psr\Log\LoggerInterface;
 
 class Foo
