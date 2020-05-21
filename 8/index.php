@@ -34,10 +34,10 @@ $end_date =(clone $start_date)->modify('next month');
 $month_period = new DatePeriod($start_date, new DateInterval('P1D'), $end_date);
 
 $container = [[]];
-//pushing gaps for first week into container
+
 custom_offset($start_date->format('N') - 1, $container, 0);
 $count = 0;
-//pushing datetime values into container
+
 foreach($month_period as $day) {
   //weekend
   if ($day->format('N') >= 6) $input = '<font color=red>'.$day->format('j').'</font>';
@@ -49,7 +49,7 @@ foreach($month_period as $day) {
     $container[$count] = [];
   }
 }
-//if next month starts in Monday - skip empty row
+
 $last_week_offset = $end_date->format('N') == 1? 0 : 7 - $end_date->format('N')+1; 
 //pushing gaps for last week
 custom_offset($last_week_offset, $container, $count);
