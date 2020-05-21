@@ -5,8 +5,8 @@
  * 
  * @category Class
  * @package  CustomLogger
- * @author   AgleevTimur <fantomas2213@gmail.com>
- * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @author   Aoao <Aaooa@gmail.com>
+ * @license  http://www.gnu.org/l GNU General Public License
  * @link     none
  */
 namespace log;
